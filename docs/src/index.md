@@ -21,8 +21,18 @@ with decision variables ``x \in \mathbb{R}^n``, ``s \in \mathbb{R}^m`` and data 
 * __Arbitrary precision types__: You can solve problems with any floating point precision.
 * __Open Source__: Our code is available on [GitHub](https://github.com/oxfordcontrol/COSMO.jl) and distributed under the Apache 2.0 Licence
 
+
+!!! tip
+
+    **For users:** COSMO has both a native interface and can also be interfaced through JuMP. If you are interested in using COSMO to solve your optimization problem, we recommend using JuMP to define your problem. Install this package as described below, take a look at our [Examples](@ref) and the [JuMP documentation](https://jump.dev/JuMP.jl/stable/) for inspiration.
+
+!!! tip
+
+    **For researchers and developers:** If you are interested in COSMO's algorithm, chordal decomposition or acceleration methods take a look at [Method](@ref), [Chordal Decomposition](@ref), and [Acceleration](@ref). If you want low-level control over the algorithm, it can make sense to start with COSMO's native interface. Moreover, take a look at [Contributing](@ref) if you want to propose changes.
+
+    
 ## Installation
-COSMO can be installed using the Julia package manager for Julia `v1.0` and higher. Inside the Julia REPL, type `]` to enter the Pkg REPL mode then run
+COSMO can be installed using the Julia package manager for Julia `v1.6` and higher. Inside the Julia REPL, type `]` to enter the Pkg REPL mode then run
 
 `pkg> add COSMO`
 
@@ -96,10 +106,11 @@ obj_value = JuMP.objective_value(m)
 - A video of my first presentation of COSMO at JuMP-dev (Santiago) is available here: [COSMO.jl at JuMP-dev](https://www.youtube.com/watch?v=H4Q0ZXDqB70)
 - A more detailed presentation on chordal decomposition and clique merging is available here: [Chordal decomposition and clique merging](https://vimeo.com/439962112)
 - I gave an overview on recent features of COSMO such as acceleration methods at JuliaCon 2021: [What's new in COSMO?](https://www.youtube.com/watch?v=O50kKay3Ie8)
+- More details on the acceleration methods were presented in my ECC 2022 talk [Safeguarded Anderson acceleration for parametric nonexpansive operators](https://vimeo.com/735144787)
 
 ## Credits
 
-The following people are involved in the development of COSMO:
+The following people are involved in the development    of COSMO:
 * [Michael Garstka](https://migarstka.github.io) (main development)
 * [Nikitas Rontsis](https://github.com/nrontsis) (algorithm performance)
 * [Paul Goulart](http://users.ox.ac.uk/~engs1373/) (code architecture, maths and algorithms)
